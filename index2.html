@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="airports" name="airports"></select>
+</body>
+<script>
+    const data = [
+        {code:"PDX", city:"Portland"},
+        {code:"SEA", city:"SEATTLE"},
+        {code:"ATL", city:"Atlanta"},
+        (code:"ORL", city:"Orlando"),
+    ];
+    for(a of data){
+        let element = document.createElement("option");
+        element.value = airport.code;
+        element.innerText = airport.city;
+        airports.appendChild(element)
+    }
+
+    airports.addEventListener("click", e => {
+        console.log(e);
+        code.innerText = e.target.value;
+    });
+</script>
+</html>
