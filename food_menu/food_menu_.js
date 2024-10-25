@@ -1,7 +1,7 @@
 
 let menuObject = {
     drinkList: ["Water", "Tea", "Sweettea", "Coke", "Dr. Pepper", "sprite"],
-    entreeList: ["Hamburger w/ fries", "Grilled Cheese", ]
+    entreeList: ["Hamburger w/ fries", "Grilled Cheese w/ tator tots", ]
     dessertList: ["cheesecake", "chocolate cake", "Snickerdoodle Cookie"]
 };
 
