@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #333333;
+    color: #dddddd;
+}
+#hikeDiv img {
+    width: 40vw;
+    height: 30vw;
+    /* object-fit: contain; */
+    object-fit: cover;
+}
+
+.hikeImage {
+    display: inline-block;
+    margin-right: 1rem;
+}

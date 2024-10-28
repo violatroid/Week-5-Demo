@@ -1,44 +1,31 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-    document.body.innerHTML += `
-        <div> Categories </div>
-        <select id="cats"></select>
-
-        <div> Activities </div>
-        <select id="acts"></select>
-
-        <div> Details </div>
-        <table id="details">?</table>
-    `;
 
     for (c of categories) {
-        cats.appendChild(new Option(c));
+        // categorySelect.innerHTML += `<option>${c}</option>`; 
+        // += append/concatenate (not replace)      
+        categorySelect.appendChild(new Option(c));
     }
 
-    cats.addEventListener("change", () => {
-        acts.innerHTML = "";
-        for (a of activities) { //extract a single activity into a
-            if (cats.value === a.category) {
-                acts.appendChild(new Option(a.name, a.id));
+    categorySelect.addEventListener("change", () => {
+        activitySelect.innerHTML = "";
+        activitySelect.appendChild(new Option("Select an Activity"));
+        for (a of activities) {
+            if (a.category === categorySelect.value) {
+                activitySelect.appendChild(new Option(a.name));
             }
         }
     });
 
-    acts.addEventListener("change", () => {
-        details.innerHTML = "";
+    activitySelect.addEventListener("change", () => {
         for (a of activities) {
-            if (a.id === acts.value) {
-                for (prop in a) { //a is the activity object
-                    let value = a[prop]; //prop is the key
-                    details.innerHTML += `
-                        <tr>
-                            <th> ${prop} </th>
-                            <td> ${value} </td>
-                        </tr>
+            if (a.name === activitySelect.value) {
+                for (key in a) {
+                    detailTable.innerHTML += `
+                        <tr><th> ${key} </th><td> ${a[key]} </td></tr>
                     `;
                 }
             }
         }
     });
 
-});
+}); // end content loaded

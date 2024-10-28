@@ -11,11 +11,20 @@
 </head>
 <body>
     <script> document.write(nav); </script>
-    <h1> ACTIVITIES </h1>
-    <h2>Categories</h2>
-    <select id="Categoryselect">
-        <option value""">Select a Category</option>
-    </select id="activityselect">
+    <h1>ACTIVITIES</h1>
     <label>
+        <h2>Select a Category:</h2>
+        <select id="categorySelect">
+            <option value="">Select a Category</option>
+        </select>
+    </label>
+    <label>
+        <h3>Activities for Selected Category:</h3>
+        <select id="activitySelect">
+            <option value="">Select an Activity</option>
+        </select>
+    </label>
+    <h4>Selected Activity Details:</h4>
+    <table id="detailTable"></table>
 </body>
 </html>
